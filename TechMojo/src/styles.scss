@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: #0b0f1a;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  min-height: 80vh;
+//   background: radial-gradient(circle at top, #1a1f3c, #05070f);
+}
+
+.hero-img {
+  max-height: 450px;
+}
+.explore-bg{
+    background-color: rgb(199, 233, 8);
+}
+.sign-in-outline{
+    color: rgb(199, 233, 8);
+    border-color: rgb(199, 233, 8);
+}
+.ml-3{
+    margin-left: 30px;
+}
+.mr-3{
+    margin-right: 30px;
+}
+.mt-3{
+    margin-top: 30px;
+}
+.ml-5{
+    margin-left: 50px;
+}
+.mr-5{
+    margin-right: 50px;
+}
+.bg-grey{
+    background-color: #1c1b1b;;
+}
+.pl-2{
+    padding-left: 20px;
+}
+.pr-2{
+    padding-right: 20px;
+}

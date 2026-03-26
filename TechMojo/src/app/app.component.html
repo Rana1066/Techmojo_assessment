@@ -1,0 +1,113 @@
+<div class=" hero-cont">
+  <!-- nav area -->
+  <div class="main ">
+    <div class="nav-sec">
+      <div class="navbar navbar-expand-lg navbar-dark bg-grey ml-3 mr-3 mt-3" style="border-radius: 10px;">
+
+        <div class="navbar-brand fw-bold logo pl-2">
+          <span class="brand-dark">RADFORGE</span>
+          <span class="brand-light">STUDIOS</span>
+        </div>
+
+        <!-- displays only for small screens -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div id="nav" class="collapse navbar-collapse justify-content-end pr-2">
+
+          <ul class="navbar-nav align-items-center gap-4 d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link">Our Games</a></li>
+            <li class="nav-item"><a class="nav-link">Blog</a></li>
+            <li class="nav-item"><a class="nav-link">About Us</a></li>
+            <li class="nav-item">
+              <i class="fa-solid fa-magnifying-glass text-white"></i>
+            </li>
+          </ul>
+
+          <button class="btn btn-outline-success ms-3 sign-in-outline">Sign In</button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="second-sec">
+      <section class="hero d-flex mt-5 text-white ">
+        <div class="ml-5">
+          <div class="row align-items-center">
+
+
+            <div class="col-lg-6 text-start">
+              <p class="fw-bold sale-text">
+                BLACK FRIDAY <span class="sale-live">SALE LIVE</span>
+                <span class="live-dot"></span>
+              </p>
+              <h1 class="display-4 fw-bold">EXPERIENCE REAL GAMING!</h1>
+              <button class="btn explore-bg mt-3 px-4">Explore <i class="fa-solid fa-arrow-right"></i></button>
+
+
+              <div class="stats d-flex gap-4 mt-4">
+                <div>
+                  <h4>3.5M</h4><small>Downloads</small>
+                </div>
+                <div>
+                  <h4>45+</h4><small>Games</small>
+                </div>
+                <div>
+                  <h4>75K+</h4><small>Members</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- cards section -->
+
+<div class="game-cards">
+  <section class="py-5">
+    <div class="mr-5 ml-5">
+      <div class="row g-4">
+
+       @for(game of games; track game.title) {
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card-wrapper">
+            <!--background div -->
+            <div class="back-sec">
+              <div class="card bg-secondary border-0">
+                <img [src]="game.img" class="card-img-top">
+                <div class="card-body">
+                  <h6>{{ game.title }}</h6>
+                  <div class="d-flex justify-content-between">
+                    <small class="d-flex align-items-center gap-1">
+                      <i class="fa-solid fa-star text-warning"></i> 4.5
+                    </small>
+                    <small class="d-flex align-items-center gap-1">
+                      <i class="fa-solid fa-download"></i> {{ game.players }}
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- top div -->
+            <div class="top-sec d-flex align-items-start">
+              @if(game.onSale === 'true') {
+              <div class="badge-tag">ON SALE</div>
+              }
+              <img src="assets/images/Thor.jpg" class="top-img">
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>
